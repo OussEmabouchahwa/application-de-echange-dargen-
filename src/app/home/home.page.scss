@@ -1,11 +1,23 @@
 #container {
   text-align: center;
-
+  width: 65%;
+  padding: 5%;
   position: absolute;
-  left: 0;
-  right: 0;
+  left: 16%;
   top: 50%;
-  transform: translateY(-50%);
+}
+
+#screen {
+  text-align: center;
+  width: 90%;
+  padding: 5%;
+  position: absolute;
+  left: 5%;
+  top: 15%;
+}
+
+ion-button {
+  height: 60px;
 }
 
 #container strong {
@@ -16,9 +28,7 @@
 #container p {
   font-size: 16px;
   line-height: 22px;
-
   color: #8c8c8c;
-
   margin: 0;
 }
 

@@ -1,20 +1,58 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Blank
-    </ion-title>
+    <ion-title>Ahla e7na l2mdw1 2024 hez  code ya bo5li t5dmch mo5ek 3eyb alik wlh </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Blank</ion-title>
+      <ion-title size="large">Convertisseur</ion-title>
     </ion-toolbar>
   </ion-header>
 
+  <div id="screen">
+    <ion-list>
+      <ion-item>
+        <ion-input
+          label="Montant"
+          labelPlacement="floating"
+          placeholder="montant à convertir"
+          [(ngModel)]="montant"
+        ></ion-input>
+
+        <ion-select label="De" [(ngModel)]="fromCurrency">
+          <ion-select-option *ngFor="let key of currencyKeys" [value]="key">{{ key }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-input
+          label="Résultat"
+          labelPlacement="stacked"
+          [(ngModel)]="result"
+          disabled
+        ></ion-input>
+
+        <ion-select label="À" [(ngModel)]="toCurrency">
+          <ion-select-option *ngFor="let key of currencyKeys" [value]="key">{{ key }}</ion-select-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+  </div>
+
   <div id="container">
-    <strong>Ready to create an app?</strong>
-    <p>Start with Ionic <a target="_blank" rel="noopener noreferrer" href="https://ionicframework.com/docs/components">UI Components</a></p>
+    <ion-button shape="round" (click)="add('9')">9</ion-button>
+    <ion-button shape="round" (click)="add('8')">8</ion-button>
+    <ion-button shape="round" (click)="add('7')">7</ion-button>
+    <ion-button shape="round" (click)="add('6')">6</ion-button>
+    <ion-button shape="round" (click)="add('5')">5</ion-button>
+    <ion-button shape="round" (click)="add('4')">4</ion-button>
+    <ion-button shape="round" (click)="add('3')">3</ion-button>
+    <ion-button shape="round" (click)="add('2')">2</ion-button>
+    <ion-button shape="round" (click)="add('1')">1</ion-button>
+    <ion-button shape="round" color="secondary" (click)="add('.')">.</ion-button>
+    <ion-button shape="round" (click)="add('0')">0</ion-button>
+    <ion-button shape="round" color="tertiary" (click)="action()">=</ion-button>
   </div>
 </ion-content>
